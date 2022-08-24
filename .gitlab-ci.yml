@@ -1,5 +1,8 @@
 # .gitlab-ci.yml
 
+stages:
+  - build
+
 variables:
   # Tell 'docker:dind' to enable TLS (recommended)
   # and generate certificates in the specified directory.
@@ -9,8 +12,9 @@ before_script:
   - echo -n $CI_REGISTRY_TOKEN | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
 
 build-push-docker-image-job:
+  stage: build
   # Specify a Docker image to run the job in.
-  image: docker:latest
+  image: ubuntu:latest
   # Specify an additional image 'docker:dind' ("Docker-in-Docker") that
   # will start up the Docker daemon when it is brought up by a runner.
   services:
