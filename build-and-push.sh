@@ -16,8 +16,8 @@ Latest version:   ${LATEST_VERSION}
 Building version: ${BUILD_VERSION}
 EOF
 
-docker build . --build-arg PREFILL_VERSION=${BUILD_VERSION} -t ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:latest
-docker image tag ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:latest ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:${BUILD_VERSION}
+docker build . --build-arg PREFILL_VERSION=${BUILD_VERSION} -t ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:latest &&
+docker image tag ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:latest ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:${BUILD_VERSION} &&
 
-docker push ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:latest
+docker push ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:latest &&
 docker push ${DOCKER_USER}/${DOCKER_IMAGE_NAME}:${BUILD_VERSION}

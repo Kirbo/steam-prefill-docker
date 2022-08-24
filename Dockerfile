@@ -10,7 +10,7 @@ RUN \
     cd /tmp && \
     LATEST_RELEASE_LINK=$(curl -s https://api.github.com/repos/tpill90/steam-lancache-prefill/releases/latest | grep 'browser_' | cut -d\" -f4 | grep 'linux-x64') && \
     LATEST_VERSION=$(echo ${LATEST_RELEASE_LINK} | sed 's/.*-\(.*\)-.*-.*/\1/') && \
-    DOWNLOAD_VERSION=$([ "${PREFILL_VERSION}" == "latest" ] && echo ${LATEST_VERSION} || echo ${PREFILL_VERSION}) \
+    DOWNLOAD_VERSION=$([ "${PREFILL_VERSION}" == "latest" ] && echo ${LATEST_VERSION} || echo ${PREFILL_VERSION}) && \
     DOWNLOAD_URL=$([ "${PREFILL_VERSION}" == "latest" ] && echo ${LATEST_RELEASE_LINK} || echo https://github.com/tpill90/steam-lancache-prefill/releases/download/v${DOWNLOAD_VERSION}/SteamPrefill-${DOWNLOAD_VERSION}-linux-x64.zip) && \
     wget -O SteamPrefill.zip ${DOWNLOAD_URL} && \
     unzip SteamPrefill.zip && \
