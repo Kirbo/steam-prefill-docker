@@ -8,9 +8,6 @@ variables:
   # and generate certificates in the specified directory.
   DOCKER_TLS_CERTDIR: "/certs"
 
-before_script:
-  - echo -n $CI_REGISTRY_TOKEN | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
-
 build-push-docker-image-job:
   stage: build
   # Specify a Docker image to run the job in.
@@ -22,4 +19,5 @@ build-push-docker-image-job:
   before_script:
     - apk --no-cache add curl bash
   script:
+    - echo -n $CI_REGISTRY_TOKEN | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
     - ./build-and-push.sh
