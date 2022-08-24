@@ -5,7 +5,7 @@ DOCKER_IMAGE_NAME=steam-prefill-docker
 
 ARGUMENT_VERSION=${1:-"latest"}
 
-LATEST_RELEASE_LINK=$(curl -s https://api.github.com/repos/tpill90/steam-lancache-prefill/releases/latest | grep 'browser_' | cut -d\" -f4 | grep 'linux-x64')
+LATEST_RELEASE_LINK=$(curl -s https://api.github.com/repos/tpill90/${DOCKER_IMAGE_NAME}/releases/latest | grep 'browser_' | cut -d\" -f4 | grep 'linux-x64')
 LATEST_VERSION=$(echo ${LATEST_RELEASE_LINK} | sed 's/.*-\(.*\)-.*-.*/\1/')
 
 BUILD_VERSION=$([ "${ARGUMENT_VERSION}" == "latest" ] && echo ${LATEST_VERSION} || echo ${ARGUMENT_VERSION})
