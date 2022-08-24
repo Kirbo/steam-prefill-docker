@@ -16,7 +16,7 @@ Prerequisites
 Clone this repository and then use either the `SteamPrefill` command or `SteamPrefill.cmd` if you're on Windows.
 
 ```bash
-git clone https://github.com/mintopia/steam-prefill-docker.git
+git clone https://github.com/kirbownz/steam-prefill-docker.git
 cd steam-prefill-docker
 ./SteamPrefill select-apps
 ```
@@ -35,7 +35,7 @@ docker run \
   -v ${PWD}/Config:/app/Config \
   -it \
   --rm \
-  ghcr.io/mintopia/steam-prefill-docker:latest \
+  kirbownz/steam-prefill-docker:latest \
   select-apps
 ```
 
@@ -57,7 +57,7 @@ This would not exist without the following:
 
 The MIT License (MIT)
 
-Copyright (c) 2022 Jessica Smith
+Copyright (c) 2022 Kimmo Saari
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

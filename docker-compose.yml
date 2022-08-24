@@ -1,7 +1,7 @@
 version: '3'
 services:
   steam-prefill:
-    build: .
+    image: kirbownz/steam-prefill-docker:latest
     volumes:
       - ./Cache:/app/Cache
       - ./Config:/app/Config
