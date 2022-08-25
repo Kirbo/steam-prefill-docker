@@ -5,6 +5,4 @@ services:
     volumes:
       - ./Cache:/app/Cache
       - ./Config:/app/Config
-    profiles:
-      - steam-prefill
     network_mode: host
