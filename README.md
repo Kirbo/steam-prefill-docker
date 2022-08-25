@@ -21,7 +21,7 @@ Prerequisites
 Clone this repository and then use either the `SteamPrefill` command or `SteamPrefill.cmd` if you're on Windows.
 
 ```bash
-git clone https://github.com/kirbownz/steam-prefill-docker.git
+git clone https://gitlab.com/kirbownz/steam-prefill-docker.git
 cd steam-prefill-docker
 ./SteamPrefill select-apps
 ```
