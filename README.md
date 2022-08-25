@@ -2,7 +2,12 @@
 
 [![](https://dcbadge.vercel.app/api/server/BKnBS4u?style=flat-square)](https://discord.com/invite/lancachenet)
 
+- [GitLab repository](https://gitlab.com/kirbo/steam-prefill-docker)
+- [GitLab CI/CD](https://gitlab.com/kirbo/steam-prefill-docker/-/pipelines)
+
 ## Introduction
+
+This repository is a fork based on Jessica Smiths' (mintopia) repository: [https://github.com/mintopia/steam-prefill-docker](https://github.com/mintopia/steam-prefill-docker).
 
 Dockerfile, docker-compose and helper scripts for running [tpill90](https://github.com/tpill90)'s [steam-lancache-prefill](https://github.com/tpill90/steam-lancache-prefill) within a docker container.
 
@@ -49,6 +54,7 @@ For support, please visit the [LanCache.Net Discord Server](https://discord.com/
 
 This would not exist without the following:
 
+- [Jessica Smith](https://github.com/mintopia)
 - [Tim Pilius](https://github.com/tpill90)
 - LanCache.Net Team
 - UK LAN Techs

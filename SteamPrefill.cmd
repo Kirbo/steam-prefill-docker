@@ -1,2 +1,2 @@
 @echo off
-docker compose run --rm steam-prefill %*
+docker compose -f docker-compose.dev.yml run --rm steam-prefill %*
