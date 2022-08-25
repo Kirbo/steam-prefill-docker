@@ -46,7 +46,7 @@ docker run \
 
 This will use the latest image from Docker hub.
 
-## Adding as a stack on Portrainer
+## Adding as a stack on Portainer
 
 1. Go to "Stacks" page in the menu
 2. Click "+ Add stack"
