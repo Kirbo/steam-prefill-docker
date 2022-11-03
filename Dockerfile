@@ -14,7 +14,7 @@ RUN \
     DOWNLOAD_URL=$([ "${PREFILL_VERSION}" == "latest" ] && echo ${LATEST_RELEASE_LINK} || echo https://github.com/tpill90/steam-lancache-prefill/releases/download/v${DOWNLOAD_VERSION}/SteamPrefill-${DOWNLOAD_VERSION}-linux-x64.zip) && \
     wget -O SteamPrefill.zip ${DOWNLOAD_URL} && \
     unzip SteamPrefill.zip && \
-    mv SteamPrefill-${DOWNLOAD_VERSION}-linux-x64\\SteamPrefill SteamPrefill && \
+    mv SteamPrefill-${DOWNLOAD_VERSION}-linux-x64/SteamPrefill SteamPrefill && \
     chmod +x SteamPrefill
 
 FROM --platform=linux/amd64 ubuntu:22.04
