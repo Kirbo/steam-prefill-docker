@@ -1,6 +1,13 @@
 # Dockerised Steam Prefill
 
+> :warning: 
+> This project is deprecated, the official Docker image should be used instead: 
+> https://hub.docker.com/r/tpill90/steam-lancache-prefill
+>
+> The setup guide can be found at: [Setup Guide](https://tpill90.github.io/steam-lancache-prefill/install-guides/Docker-Setup-Guide)
+
 [![](https://dcbadge.vercel.app/api/server/BKnBS4u?style=flat-square)](https://discord.com/invite/lancachenet)
+
 
 - [GitLab repository](https://gitlab.com/kirbo/steam-prefill-docker)
 - [GitLab CI/CD](https://gitlab.com/kirbo/steam-prefill-docker/-/pipelines)
